@@ -8,11 +8,17 @@ public class GravityBall : MonoBehaviour {
     public float maxForce = 20f;
     private AreaEffector2D  effector;
     private Transform arrow;
+
+	public float speed = 1f;
+	private Vector2 target;
+	private bool bHasTarget = false;
+
 	// Use this for initialization
 	void Start () {
 		effector = GetComponent<AreaEffector2D> ();
         arrow = transform.GetChild(0);
         arrow.localScale = new Vector2(effector.forceMagnitude / maxForce, arrow.localScale.y);
+		this.transform.localScale = new Vector3 (0.1f, 0.1f, 0.1f);
 	}
 
 	void OnMouseOver()
@@ -31,4 +37,26 @@ public class GravityBall : MonoBehaviour {
             effector.forceAngle = arrow.eulerAngles.z;
         }
     }
+
+	void FixedUpdate()
+	{
+		if (bHasTarget)
+		{
+			Vector3 move = Vector3.MoveTowards (transform.position, target, speed);
+			transform.position = move;
+			if ((Vector2)move == target)
+			{
+				bHasTarget = false;
+				this.transform.localScale = new Vector3 (1, 1, 1);
+			}
+		}
+	}
+
+	public void SetTarget(Vector3 from, Vector3 _target)
+	{
+		transform.position = from;
+		target = _target;
+		bHasTarget = true;
+		this.transform.localScale = new Vector3 (0.1f, 0.1f, 0.1f);
+	}
 }

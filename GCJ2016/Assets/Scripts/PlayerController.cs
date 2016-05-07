@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerController : MonoBehaviour {
 
@@ -13,6 +14,8 @@ public class PlayerController : MonoBehaviour {
 	[SerializeField] private float maxVelocity = 1f;
 	[SerializeField] private float jumpForce = 5f;
 	[SerializeField] private LayerMask mask;
+	[SerializeField] private GameObject bullet;
+	[SerializeField] private int maxGravityBalls = 3;
 
 	private float velocity = 0;
 	private bool jump = false;
@@ -21,6 +24,8 @@ public class PlayerController : MonoBehaviour {
 
 	private int animVelocity = Animator.StringToHash ("velocity");
 	private int animGrounded = Animator.StringToHash ("isGrounded");
+
+	private List<GameObject> gravityBalls = new List<GameObject>();
 
 	// Use this for initialization
 	void Start ()
@@ -33,12 +38,18 @@ public class PlayerController : MonoBehaviour {
 	{
 		UpdateArm ();
 		UpdateMovement ();
+
+		if (Input.GetMouseButtonDown(0))
+		{
+			Shoot ();
+		}
+
 		UpdateAnims ();
 	}
 
 	void FixedUpdate()
 	{
-		Vector2 newVel = new Vector2(velocity, rb.velocity.y);
+		Vector2 newVel = new Vector2((velocity == 0) ? rb.velocity.x : velocity, rb.velocity.y);
 
 		// Check if player is grounded
 		RaycastHit2D rc = Physics2D.Raycast(groundCheck.position, Vector2.down, 0.1f, ~mask);
@@ -82,6 +93,35 @@ public class PlayerController : MonoBehaviour {
 		transform.localScale = new Vector3 ((velocity > 0) ? 1 : (velocity < 0) ? -1 : transform.localScale.x, 1, 1);
 		animator.SetBool (animGrounded, isGrounded);
 		animator.SetFloat (animVelocity, Mathf.Abs(velocity));
+	}
+
+	void Shoot()
+	{
+		Vector3 mousePos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
+		mousePos.z = 0;
+		GameObject go;
+
+		RaycastHit2D hit = Physics2D.Linecast (weapon.transform.position, mousePos, LayerMask.NameToLayer("Ball"));
+		if (gravityBalls.Count < maxGravityBalls)
+		{
+			go = (GameObject) Instantiate (bullet, weapon.transform.position, Quaternion.identity);
+			gravityBalls.Add (go);
+		}
+		else
+		{
+			go = gravityBalls [0];
+			gravityBalls.RemoveAt (0);
+			gravityBalls.Add (go);
+		}
+
+		if (hit.transform == null)
+		{
+			go.GetComponent<GravityBall> ().SetTarget (weapon.transform.position, mousePos);
+		}
+		else
+		{
+			go.GetComponent<GravityBall> ().SetTarget (weapon.transform.position, hit.point);
+		}
 	}
 
 	public void Die()
