@@ -1,34 +1,40 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour {
+public class GameManager : GeneralManager {
 
-	public const float gravityEarth = 9.81f;
-	public const float gravityMoon = 1.6f;
+	[Header("HUD")]
+	[SerializeField] private GameObject canvasPlay;
+	[SerializeField] private GameObject canvasPause;
 
 	// Use this for initialization
-	void Start () {
-	
+	void Start ()
+	{
+		canvasPlay.SetActive (true);
+		canvasPause.SetActive (false);
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	
+	void Update ()
+	{
+		if (Input.GetButtonDown("Cancel"))
+		{
+			Pause ();
+		}
 	}
 
-	public void LoadLevel(int level)
+	override public void Pause()
 	{
-		SceneManager.LoadSceneAsync (level);
-	}
-
-	public void ReloadLevel()
-	{
-		SceneManager.LoadSceneAsync (SceneManager.GetActiveScene ().buildIndex);
-	}
-
-	public void Quit()
-	{
-		Application.Quit ();
+		base.Pause ();
+		if (_gameState == GameState.PAUSE)
+		{
+			canvasPause.SetActive (true);
+			canvasPlay.SetActive (false);
+		}
+		else if (_gameState == GameState.PLAY)
+		{
+			canvasPause.SetActive (false);
+			canvasPlay.SetActive (true);
+		}
 	}
 }
