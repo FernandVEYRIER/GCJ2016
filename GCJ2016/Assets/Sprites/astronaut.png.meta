@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: cc90844e349a9b7479d26c3678e6d55a
-timeCreated: 1462629303
+timeCreated: 1462633324
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -56,7 +56,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 300
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
@@ -70,7 +70,7 @@ TextureImporter:
         width: 265
         height: 500
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: 83.5, y: 32}
@@ -113,7 +113,7 @@ TextureImporter:
         width: 249
         height: 500
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: 77.5, y: 29}
@@ -154,7 +154,7 @@ TextureImporter:
         width: 228
         height: 500
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: 62, y: -168}
@@ -195,7 +195,7 @@ TextureImporter:
         width: 228
         height: 500
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: 55, y: -180}
@@ -235,7 +235,7 @@ TextureImporter:
         width: 224
         height: 498
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: 71, y: -117}
@@ -276,7 +276,7 @@ TextureImporter:
         width: 245
         height: 498
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: 77.5, y: -33}
@@ -317,7 +317,7 @@ TextureImporter:
         width: 261
         height: 498
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: 90.5, y: -61}
@@ -359,7 +359,7 @@ TextureImporter:
         width: 224
         height: 498
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: 72, y: -195}
@@ -399,7 +399,7 @@ TextureImporter:
         width: 265
         height: 481
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
       - - {x: 107.5, y: -239.5}
@@ -443,17 +443,17 @@ TextureImporter:
         y: 266
         width: 184
         height: 70
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.1789491, y: 0.59042007}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -92, y: 35}
-        - {x: -92, y: -13}
-        - {x: -46, y: -35}
-        - {x: 90, y: -35}
-        - {x: 92, y: -30}
-        - {x: 92, y: 28}
-        - {x: 88, y: 35}
+      - - {x: -32.926636, y: 28.670593}
+        - {x: -32.926636, y: -19.329407}
+        - {x: 13.073364, y: -41.329407}
+        - {x: 149.07336, y: -41.329407}
+        - {x: 151.07336, y: -36.329407}
+        - {x: 151.07336, y: 21.670593}
+        - {x: 147.07336, y: 28.670593}
     - name: astronaut_10
       rect:
         serializedVersion: 2
@@ -461,21 +461,21 @@ TextureImporter:
         y: 298
         width: 373
         height: 141
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.4095014, y: 0.3503723}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 186.5, y: 52.5}
-        - {x: 179.5, y: 70.5}
-        - {x: -91.5, y: 70.5}
-        - {x: -175.5, y: 37.5}
-        - {x: -186.5, y: 28.5}
-        - {x: -186.5, y: -49.5}
-        - {x: -183.5, y: -62.5}
-        - {x: -66.5, y: -70.5}
-        - {x: 17.5, y: -70.5}
-        - {x: 19.5, y: -67.5}
-        - {x: 186.5, y: 21.5}
+      - - {x: 220.25598, y: 73.5975}
+        - {x: 213.25598, y: 91.5975}
+        - {x: -57.74402, y: 91.5975}
+        - {x: -141.74402, y: 58.597504}
+        - {x: -152.74402, y: 49.597504}
+        - {x: -152.74402, y: -28.402496}
+        - {x: -149.74402, y: -41.402496}
+        - {x: -32.74402, y: -49.402496}
+        - {x: 51.25598, y: -49.402496}
+        - {x: 53.25598, y: -46.402496}
+        - {x: 220.25598, y: 42.597504}
     - name: astronaut_11
       rect:
         serializedVersion: 2
@@ -483,19 +483,19 @@ TextureImporter:
         y: 204
         width: 78
         height: 63
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.20246926, y: 0.3660472}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 37, y: 31.5}
-        - {x: -28, y: 31.5}
-        - {x: -39, y: 20.5}
-        - {x: -39, y: -21.5}
-        - {x: -31, y: -31.5}
-        - {x: -12, y: -31.5}
-        - {x: -6, y: -29.5}
-        - {x: 39, y: 0.5}
-        - {x: 39, y: 25.5}
+      - - {x: 60.207397, y: 39.939026}
+        - {x: -4.7926025, y: 39.939026}
+        - {x: -15.792603, y: 28.939026}
+        - {x: -15.792603, y: -13.060974}
+        - {x: -7.7926025, y: -23.060974}
+        - {x: 11.207397, y: -23.060974}
+        - {x: 17.207397, y: -21.060974}
+        - {x: 62.207397, y: 8.939026}
+        - {x: 62.207397, y: 33.939026}
     outline: []
   spritePackingTag: 
   userData: 
