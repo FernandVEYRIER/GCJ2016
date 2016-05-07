@@ -1,25 +1,56 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class GameManager : GeneralManager {
+
+	public static GameManager GM;
 
 	[Header("HUD")]
 	[SerializeField] private GameObject canvasPlay;
 	[SerializeField] private GameObject canvasPause;
 
-	// Use this for initialization
+	[Header("Player")]
+	[SerializeField] private GameObject playerPrefab;
+	[SerializeField] private CameraFollow camFollow;
+
+	private Transform spawnPoint;
+
+	private Coroutine fadeRoutine = null;
+
+	void Awake()
+	{
+		GM = this;
+	}
+
 	void Start ()
 	{
 		canvasPlay.SetActive (true);
 		canvasPause.SetActive (false);
+
+		spawnPoint = GameObject.FindGameObjectWithTag ("Respawn").transform;
+		SpawnPlayer ();
 	}
-	
-	// Update is called once per frame
+
+	public void SpawnPlayer()
+	{
+		if (fadeRoutine != null)
+		{
+			StopCoroutine (fadeRoutine);
+		}
+		fadeRoutine = StartCoroutine (FadeEffect (canvasPlay));
+	}
+
 	void Update ()
 	{
 		if (Input.GetButtonDown("Cancel"))
 		{
 			Pause ();
+		}
+
+		if (Input.GetKeyDown(KeyCode.T))
+		{
+			SpawnPlayer ();
 		}
 	}
 
@@ -36,5 +67,29 @@ public class GameManager : GeneralManager {
 			canvasPause.SetActive (false);
 			canvasPlay.SetActive (true);
 		}
+	}
+
+	IEnumerator FadeEffect(GameObject obj)
+	{
+		Image image = obj.GetComponent<Image> ();
+		Color col;
+
+		for (col = image.color; col.a <= 1; col.a += 0.015f)
+		{
+			image.color = col;
+			yield return new WaitForSeconds (0.001f);
+		}
+		col.a = 1;
+		image.color = col;
+
+		camFollow.ResetCamera((GameObject) Instantiate (playerPrefab, spawnPoint.position, Quaternion.identity));
+
+		for (col = image.color; col.a >= 0; col.a -= 0.015f)
+		{
+			image.color = col;
+			yield return new WaitForSeconds (0.001f);
+		}
+		col.a = 0;
+		image.color = col;
 	}
 }

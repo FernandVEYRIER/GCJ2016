@@ -83,4 +83,9 @@ public class PlayerController : MonoBehaviour {
 		animator.SetBool (animGrounded, isGrounded);
 		animator.SetFloat (animVelocity, Mathf.Abs(velocity));
 	}
+
+	public void Die()
+	{
+		GameManager.GM.SpawnPlayer ();
+	}
 }
