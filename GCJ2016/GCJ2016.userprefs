@@ -1,8 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GeneralManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\GravityBall.cs">
     <Files>
-      <File FileName="Assets\Scripts\GeneralManager.cs" Line="5" Column="25" />
+      <File FileName="Assets\Shield.cs" Line="17" Column="38" />
+      <File FileName="Assets\Scripts\GeneralManager.cs" Line="5" Column="46" />
+      <File FileName="Assets\GravityBall.cs" Line="14" Column="17" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
