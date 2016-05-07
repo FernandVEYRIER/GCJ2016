@@ -210,6 +210,7 @@ MonoBehaviour:
   canvasPlay: {fileID: 140515673}
   canvasPause: {fileID: 1907716376}
   playerPrefab: {fileID: 179930, guid: 8e9fed803fd0cf84bbae752b96d40e50, type: 2}
+  camFollow: {fileID: 387193149}
 --- !u!4 &292752989
 Transform:
   m_ObjectHideFlags: 0
@@ -394,7 +395,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3178a517607df304c9c07a7f4e4e7019, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!1 &527032148
 GameObject:
   m_ObjectHideFlags: 0
