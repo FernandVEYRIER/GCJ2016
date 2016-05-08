@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour {
 		Vector2 newVel;
 		newVel.y = rb.velocity.y;
 
-		newVel.x = (velocity == 0 || !isGrounded) ? rb.velocity.x : velocity;
+		newVel.x = (!isGrounded) ? rb.velocity.x : velocity;
 
 		// Check if player is grounded
 		RaycastHit2D rc = Physics2D.Raycast(groundCheck.position, Vector2.down, 0.1f, ~mask);
@@ -105,12 +105,17 @@ public class PlayerController : MonoBehaviour {
 			return;
 		}
 
+		if (gravityBalls.Count >= maxGravityBalls)
+		{
+			return;
+		}
+
 		Vector3 mousePos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 		mousePos.z = 0;
 		GameObject go;
 
 		RaycastHit2D hit = Physics2D.Linecast (weapon.transform.position, mousePos, LayerMask.NameToLayer("Ball"));
-		if (gravityBalls.Count < maxGravityBalls)
+		/*if (gravityBalls.Count < maxGravityBalls)
 		{
 			go = (GameObject) Instantiate (bullet, weapon.transform.position, Quaternion.identity);
 			gravityBalls.Add (go);
@@ -120,7 +125,11 @@ public class PlayerController : MonoBehaviour {
 			go = gravityBalls [0];
 			gravityBalls.RemoveAt (0);
 			gravityBalls.Add (go);
-		}
+		}*/
+
+		go = (GameObject) Instantiate (bullet, weapon.transform.position, Quaternion.identity);
+
+		gravityBalls.Add (go);
 
 		if (hit.transform == null)
 		{
@@ -139,5 +148,10 @@ public class PlayerController : MonoBehaviour {
 		{
 			Destroy (gBall);
 		}
+	}
+
+	public int GetGravityBallsCount()
+	{
+		return gravityBalls.Count;
 	}
 }

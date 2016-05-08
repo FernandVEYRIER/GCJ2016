@@ -44,6 +44,12 @@ public class GameManager : GeneralManager {
 
 	void Update ()
 	{
+		if (Input.GetKeyDown(KeyCode.Return))
+		{
+			ReloadLevel ();
+			return;
+		}
+
 		if (Input.GetButtonDown("Cancel"))
 		{
 			Pause ();
