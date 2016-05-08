@@ -631,7 +631,7 @@ MonoBehaviour:
   canvasPlay: {fileID: 140515673}
   canvasPause: {fileID: 1907716376}
   playerPrefab: {fileID: 179930, guid: 8e9fed803fd0cf84bbae752b96d40e50, type: 2}
-  camFollow: {fileID: 0}
+  camFollow: {fileID: 1009428001}
 --- !u!4 &292752989
 Transform:
   m_ObjectHideFlags: 0
@@ -1172,7 +1172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80d947a77aaa24b47b736965df971a63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToLoad: 0
+  levelToLoad: 2
 --- !u!1 &1008683031
 GameObject:
   m_ObjectHideFlags: 0
@@ -1245,6 +1245,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+--- !u!114 &1009428001 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11478092, guid: 61547b71217c0e6488b4595f5b715a09,
+    type: 2}
+  m_PrefabInternal: {fileID: 346910840}
+  m_Script: {fileID: 11500000, guid: 3178a517607df304c9c07a7f4e4e7019, type: 3}
 --- !u!1 &1041466698
 GameObject:
   m_ObjectHideFlags: 0

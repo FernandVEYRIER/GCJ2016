@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\BuilderScript.cs" />
+     <Compile Include="Assets\CustomEffector2D.cs" />
      <Compile Include="Assets\Plateform.cs" />
      <Compile Include="Assets\Scripts\CameraFollow.cs" />
      <Compile Include="Assets\Scripts\EndLevel.cs" />
