@@ -11,6 +11,7 @@ public class GameManager : GeneralManager {
 	[SerializeField] private GameObject canvasPlay;
 	[SerializeField] private GameObject canvasHide;
 	[SerializeField] private GameObject canvasPause;
+	[SerializeField] private Text textBullet;
 
 	[Header("Player")]
 	[SerializeField] private GameObject playerPrefab;
@@ -125,5 +126,10 @@ public class GameManager : GeneralManager {
 		image.color = col;
 
 		SceneManager.LoadScene (levelToLoad);
+	}
+
+	public void UpdateAmmo(int bulletCount)
+	{
+		textBullet.text = "x " + bulletCount.ToString ();
 	}
 }

@@ -45,6 +45,8 @@ public class PlayerController : MonoBehaviour {
 		}
 
 		UpdateAnims ();
+
+		GameManager.GM.UpdateAmmo (maxGravityBalls - GetGravityBallsCount ());
 	}
 
 	void FixedUpdate()
