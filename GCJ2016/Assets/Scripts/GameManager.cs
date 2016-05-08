@@ -8,7 +8,6 @@ public class GameManager : GeneralManager {
 	public static GameManager GM;
 
 	[Header("HUD")]
-	[SerializeField] private int nextLevel = 0;
 	[SerializeField] private GameObject canvasPlay;
 	[SerializeField] private GameObject canvasPause;
 
