@@ -1,0 +1,217 @@
+fileFormatVersion: 2
+guid: 99ee988958fe87549af723df3db035e5
+timeCreated: 1462672681
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: product_platform4_0
+    21300002: product_platform4_1
+    21300004: product_platform4_2
+    21300006: product_platform4_3
+    21300008: product_platform4_4
+    21300010: product_platform4_5
+    21300012: product_platform4_6
+    21300014: product_platform4_7
+    21300016: product_platform4_8
+    21300018: product_platform4_9
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: product_platform4_0
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 42
+        width: 73
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -36.5, y: 35.5}
+        - {x: -36.5, y: -35.5}
+        - {x: 36.5, y: -35.5}
+        - {x: 36.5, y: 35.5}
+    - name: product_platform4_1
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 278
+        width: 71
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35.5, y: 36}
+        - {x: -35.5, y: -36}
+        - {x: 35.5, y: -36}
+        - {x: 35.5, y: 36}
+    - name: product_platform4_2
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 278
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -36, y: 36}
+        - {x: -36, y: -36}
+        - {x: 36, y: -36}
+        - {x: 36, y: 36}
+    - name: product_platform4_3
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 278
+        width: 71
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35.5, y: 35.5}
+        - {x: -35.5, y: -35.5}
+        - {x: 35.5, y: -35.5}
+        - {x: 35.5, y: 35.5}
+    - name: product_platform4_4
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 278
+        width: 71
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35.5, y: 36.5}
+        - {x: -35.5, y: -36.5}
+        - {x: 35.5, y: -36.5}
+        - {x: 35.5, y: 36.5}
+    - name: product_platform4_5
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 278
+        width: 72
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -36, y: 36}
+        - {x: -36, y: -36}
+        - {x: 36, y: -36}
+        - {x: 36, y: 36}
+    - name: product_platform4_6
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 42
+        width: 72
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -36, y: 35.5}
+        - {x: -36, y: -35.5}
+        - {x: 36, y: -35.5}
+        - {x: 36, y: 35.5}
+    - name: product_platform4_7
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 42
+        width: 71
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35.5, y: 36}
+        - {x: -35.5, y: -36}
+        - {x: 35.5, y: -36}
+        - {x: 35.5, y: 36}
+    - name: product_platform4_8
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 203
+        width: 72
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -36, y: 35.5}
+        - {x: -36, y: -35.5}
+        - {x: 36, y: -35.5}
+        - {x: 36, y: 35.5}
+    - name: product_platform4_9
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 203
+        width: 72
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -36, y: 35.5}
+        - {x: -36, y: -35.5}
+        - {x: 36, y: -35.5}
+        - {x: 36, y: 35.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
