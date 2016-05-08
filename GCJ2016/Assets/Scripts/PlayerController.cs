@@ -49,7 +49,10 @@ public class PlayerController : MonoBehaviour {
 
 	void FixedUpdate()
 	{
-		Vector2 newVel = new Vector2((velocity == 0) ? rb.velocity.x : velocity, rb.velocity.y);
+		Vector2 newVel;
+		newVel.y = rb.velocity.y;
+
+		newVel.x = (velocity == 0 || !isGrounded) ? rb.velocity.x : velocity;
 
 		// Check if player is grounded
 		RaycastHit2D rc = Physics2D.Raycast(groundCheck.position, Vector2.down, 0.1f, ~mask);

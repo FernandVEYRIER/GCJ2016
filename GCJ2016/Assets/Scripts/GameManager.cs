@@ -98,6 +98,9 @@ public class GameManager : GeneralManager {
 
 	public override void LoadLevel(int level)
 	{
+		Time.timeScale = 1;
+		canvasPlay.SetActive (true);
+		canvasPause.SetActive (false);
 		StartCoroutine (LoadEffect (canvasPlay, level));
 	}
 
