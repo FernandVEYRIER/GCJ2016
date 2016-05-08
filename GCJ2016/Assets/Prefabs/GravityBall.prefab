@@ -110,8 +110,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 412804}
   - 58: {fileID: 5823384}
-  - 249: {fileID: 24954772}
   - 114: {fileID: 11447326}
+  - 114: {fileID: 11420802}
   m_Layer: 9
   m_Name: GravityBall
   m_TagString: GravityBall
@@ -219,10 +219,23 @@ CircleCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_UsedByEffector: 1
+  m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2.4478045
+--- !u!114 &11420802
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 192940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f73ea17b43aa4f4c8343b1695816dfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceAngle: 90
+  forceMagnitude: 40
 --- !u!114 &11423248
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -300,8 +313,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sensibility: 2
-  minForce: 1.6
-  maxForce: 20
+  minForce: 40
+  maxForce: 80
   speed: 1
 --- !u!212 &21200876
 SpriteRenderer:
@@ -483,25 +496,6 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!249 &24954772
-AreaEffector2D:
-  serializedVersion: 2
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 192940}
-  m_Enabled: 1
-  m_UseColliderMask: 1
-  m_ColliderMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGlobalAngle: 0
-  m_ForceAngle: 0
-  m_ForceMagnitude: 10
-  m_ForceVariation: 0
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_ForceTarget: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

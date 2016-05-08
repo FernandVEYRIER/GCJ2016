@@ -6,7 +6,7 @@ public class GravityBall : MonoBehaviour {
     public float sensibility = 2f;
     public float minForce = 1.6f;
     public float maxForce = 20f;
-    private AreaEffector2D  effector;
+    private CustomEffector2D  effector;
     private Transform arrow;
 
 	public float speed = 1f;
@@ -16,7 +16,7 @@ public class GravityBall : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		effector = GetComponent<AreaEffector2D> ();
+		effector = GetComponent<CustomEffector2D> ();
         arrow = transform.GetChild(0);
         arrow.localScale = new Vector2(effector.forceMagnitude / maxForce, arrow.localScale.y);
 		this.transform.localScale = new Vector3 (0.1f, 0.1f, 0.1f);
