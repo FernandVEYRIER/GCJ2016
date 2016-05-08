@@ -32,7 +32,10 @@ public class GameManager : GeneralManager {
 		canvasPause.SetActive (false);
 
 		spawnPoint = GameObject.FindGameObjectWithTag ("Respawn").transform;
-		SpawnPlayer ();
+        Color c = canvasHide.GetComponent<Image>().color;
+        c.a = 1;
+        canvasHide.GetComponent<Image>().color = c;
+        SpawnPlayer ();
 	}
 
 	public void SpawnPlayer()

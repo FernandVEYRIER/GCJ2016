@@ -32,7 +32,16 @@ public class Tutorial : MonoBehaviour {
 			case 1:
 				HandleLevel1 ();
 				break;
-			default:
+            case 2:
+                HandleLevel2 ();
+                break;
+            case 3:
+                HandleLevel3();
+                break;
+            case 4:
+                HandleLevel4();
+                break;
+            default:
 				break;
 		}
 	}
@@ -47,7 +56,22 @@ public class Tutorial : MonoBehaviour {
 		}
 	}
 
-	public void ChangeText(string _text)
+    void HandleLevel2()
+    {
+        playerController.maxGravityBalls = 1;
+    }
+
+    void HandleLevel3()
+    {
+        playerController.maxGravityBalls = 2;
+    }
+
+    void HandleLevel4()
+    {
+        playerController.maxGravityBalls = 1;
+    }
+
+    public void ChangeText(string _text)
 	{
 		text.text = _text;
 	}

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class GravityBall : MonoBehaviour {
 
@@ -13,6 +14,7 @@ public class GravityBall : MonoBehaviour {
 	private Vector2 target;
 	private bool bHasTarget = false;
 	private Transform playerArm;
+    private List<SpriteRenderer> sprites = new List<SpriteRenderer>();
 
 	// Use this for initialization
 	void Start () {
@@ -23,7 +25,11 @@ public class GravityBall : MonoBehaviour {
 		playerArm = GameObject.FindGameObjectWithTag ("Player").transform.GetChild (0);
 		arrow.rotation = playerArm.rotation;
 		effector.forceAngle = arrow.eulerAngles.z;
-	}
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            sprites.Add(transform.GetChild(i).GetComponent<SpriteRenderer>());
+        }
+    }
 
 	void OnMouseOver()
 	{
@@ -56,6 +62,20 @@ public class GravityBall : MonoBehaviour {
 				effector.forceAngle = arrow.eulerAngles.z;
 			}
 		}
+        if (effector.getPush())
+        {
+            foreach (SpriteRenderer item in sprites)
+            {
+                item.color = Color.white;
+            }
+        }
+        else
+        {
+            foreach (SpriteRenderer item in sprites)
+            {
+                item.color = Color.gray;
+            }
+        }
 	}
 
 	public void SetTarget(Vector3 from, Vector3 _target)

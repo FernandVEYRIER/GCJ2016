@@ -235,7 +235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceAngle: 90
-  forceMagnitude: 40
+  forceMagnitude: 50
 --- !u!114 &11423248
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -312,9 +312,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb3d1297f4786db4894c2af1a8f8edb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensibility: 2
+  sensibility: 5
   minForce: 40
-  maxForce: 80
+  maxForce: 100
   speed: 1
 --- !u!212 &21200876
 SpriteRenderer:

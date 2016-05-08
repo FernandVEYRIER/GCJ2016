@@ -9,7 +9,7 @@ public class TerrainBounds : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		if (col.tag == "GravityBall")
+		if (col.tag == "GravityBall" || col.tag == "Ground")
 		{
 			return;
 		}
