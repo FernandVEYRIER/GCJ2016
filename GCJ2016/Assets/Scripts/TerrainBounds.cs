@@ -9,6 +9,10 @@ public class TerrainBounds : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
+		if (col.tag == "GravityBall")
+		{
+			return;
+		}
 		if (col.tag == "Player")
 		{
 			col.gameObject.GetComponent<PlayerController> ().Die ();

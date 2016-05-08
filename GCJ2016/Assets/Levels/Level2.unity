@@ -628,7 +628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 537aad70d77b2774891b37515844ca4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextLevel: 2
+  nextLevel: 0
   canvasPlay: {fileID: 140515673}
   canvasPause: {fileID: 1907716376}
   playerPrefab: {fileID: 179930, guid: 8e9fed803fd0cf84bbae752b96d40e50, type: 2}

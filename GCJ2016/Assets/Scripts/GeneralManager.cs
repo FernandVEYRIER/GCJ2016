@@ -17,7 +17,7 @@ public class GeneralManager : MonoBehaviour {
 	public GameState gameState
 	{ get { return _gameState; } }
 
-	public void LoadLevel(int level)
+	virtual public void LoadLevel(int level)
 	{
 		SceneManager.LoadSceneAsync (level);
 	}

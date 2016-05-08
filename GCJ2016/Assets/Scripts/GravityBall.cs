@@ -12,6 +12,7 @@ public class GravityBall : MonoBehaviour {
 	public float speed = 1f;
 	private Vector2 target;
 	private bool bHasTarget = false;
+	private Transform playerArm;
 
 	// Use this for initialization
 	void Start () {
@@ -19,6 +20,9 @@ public class GravityBall : MonoBehaviour {
         arrow = transform.GetChild(0);
         arrow.localScale = new Vector2(effector.forceMagnitude / maxForce, arrow.localScale.y);
 		this.transform.localScale = new Vector3 (0.1f, 0.1f, 0.1f);
+		playerArm = GameObject.FindGameObjectWithTag ("Player").transform.GetChild (0);
+		arrow.rotation = playerArm.rotation;
+		effector.forceAngle = arrow.eulerAngles.z;
 	}
 
 	void OnMouseOver()
@@ -30,11 +34,11 @@ public class GravityBall : MonoBehaviour {
             float persent = effector.forceMagnitude / maxForce;
             arrow.localScale = new Vector2(persent, arrow.localScale.y);
         }
-        if (Input.GetKey(KeyCode.Space))
+		if (Input.GetMouseButton(1))
         {
-            Vector3 worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            arrow.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Rad2Deg * (Mathf.Atan2(worldPos.y, worldPos.x))));
-            effector.forceAngle = arrow.eulerAngles.z;
+			Vector3 wordPos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+			arrow.rotation = Quaternion.Euler(new Vector3(0, 0, Mathf.Rad2Deg * (Mathf.Atan2(wordPos.y, wordPos.x))));
+			effector.forceAngle = arrow.eulerAngles.z;
         }
     }
 
@@ -48,6 +52,8 @@ public class GravityBall : MonoBehaviour {
 			{
 				bHasTarget = false;
 				this.transform.localScale = new Vector3 (1, 1, 1);
+				arrow.rotation = playerArm.rotation;
+				effector.forceAngle = arrow.eulerAngles.z;
 			}
 		}
 	}

@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : GeneralManager {
 
 	public static GameManager GM;
 
 	[Header("HUD")]
+	[SerializeField] private int nextLevel = 0;
 	[SerializeField] private GameObject canvasPlay;
 	[SerializeField] private GameObject canvasPause;
 
@@ -38,7 +40,7 @@ public class GameManager : GeneralManager {
 		{
 			StopCoroutine (fadeRoutine);
 		}
-		fadeRoutine = StartCoroutine (FadeEffect (canvasPlay));
+		fadeRoutine = StartCoroutine (SpawnEffect (canvasPlay));
 	}
 
 	void Update ()
@@ -59,17 +61,19 @@ public class GameManager : GeneralManager {
 		base.Pause ();
 		if (_gameState == GameState.PAUSE)
 		{
+			Time.timeScale = 0;
 			canvasPause.SetActive (true);
 			canvasPlay.SetActive (false);
 		}
 		else if (_gameState == GameState.PLAY)
 		{
+			Time.timeScale = 1;
 			canvasPause.SetActive (false);
 			canvasPlay.SetActive (true);
 		}
 	}
 
-	IEnumerator FadeEffect(GameObject obj)
+	IEnumerator SpawnEffect(GameObject obj)
 	{
 		Image image = obj.GetComponent<Image> ();
 		Color col;
@@ -91,5 +95,26 @@ public class GameManager : GeneralManager {
 		}
 		col.a = 0;
 		image.color = col;
+	}
+
+	public override void LoadLevel(int level)
+	{
+		StartCoroutine (LoadEffect (canvasPlay, nextLevel));
+	}
+
+	IEnumerator LoadEffect(GameObject obj, int levelToLoad)
+	{
+		Image image = obj.GetComponent<Image> ();
+		Color col;
+
+		for (col = image.color; col.a <= 1; col.a += 0.015f)
+		{
+			image.color = col;
+			yield return new WaitForSeconds (0.001f);
+		}
+		col.a = 1;
+		image.color = col;
+
+		SceneManager.LoadScene (levelToLoad);
 	}
 }

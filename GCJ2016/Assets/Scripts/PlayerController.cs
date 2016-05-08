@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour {
 	[SerializeField] private float jumpForce = 5f;
 	[SerializeField] private LayerMask mask;
 	[SerializeField] private GameObject bullet;
-	[SerializeField] private int maxGravityBalls = 3;
+	public int maxGravityBalls = 3;
 
 	private float velocity = 0;
 	private bool jump = false;
@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour {
 	void UpdateMovement()
 	{
 		velocity = Input.GetAxis ("Horizontal") * maxVelocity;
-		jump = Input.GetButtonDown ("Jump");
+		jump = Input.GetButton ("Jump");
 	}
 
 	void UpdateArm()
@@ -127,5 +127,9 @@ public class PlayerController : MonoBehaviour {
 	public void Die()
 	{
 		GameManager.GM.SpawnPlayer ();
+		foreach (GameObject gBall in gravityBalls)
+		{
+			Destroy (gBall);
+		}
 	}
 }
