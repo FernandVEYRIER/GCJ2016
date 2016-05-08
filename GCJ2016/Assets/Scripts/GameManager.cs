@@ -9,6 +9,7 @@ public class GameManager : GeneralManager {
 
 	[Header("HUD")]
 	[SerializeField] private GameObject canvasPlay;
+	[SerializeField] private GameObject canvasHide;
 	[SerializeField] private GameObject canvasPause;
 
 	[Header("Player")]
@@ -39,7 +40,7 @@ public class GameManager : GeneralManager {
 		{
 			StopCoroutine (fadeRoutine);
 		}
-		fadeRoutine = StartCoroutine (SpawnEffect (canvasPlay));
+		fadeRoutine = StartCoroutine (SpawnEffect (canvasHide));
 	}
 
 	void Update ()
@@ -107,7 +108,7 @@ public class GameManager : GeneralManager {
 		Time.timeScale = 1;
 		canvasPlay.SetActive (true);
 		canvasPause.SetActive (false);
-		StartCoroutine (LoadEffect (canvasPlay, level));
+		StartCoroutine (LoadEffect (canvasHide, level));
 	}
 
 	IEnumerator LoadEffect(GameObject obj, int levelToLoad)
