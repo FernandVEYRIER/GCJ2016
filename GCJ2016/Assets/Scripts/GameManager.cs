@@ -99,7 +99,7 @@ public class GameManager : GeneralManager {
 
 	public override void LoadLevel(int level)
 	{
-		StartCoroutine (LoadEffect (canvasPlay, nextLevel));
+		StartCoroutine (LoadEffect (canvasPlay, level));
 	}
 
 	IEnumerator LoadEffect(GameObject obj, int levelToLoad)

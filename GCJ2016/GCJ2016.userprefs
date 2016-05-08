@@ -1,16 +1,17 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\EndLevel.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Jukebox.cs">
     <Files>
-      <File FileName="Assets\Scripts\Tutorial.cs" Line="45" Column="4" />
-      <File FileName="Assets\Scripts\GameManager.cs" Line="102" Column="52" />
-      <File FileName="Assets\Scripts\PlayerController.cs" Line="84" Column="80" />
-      <File FileName="Assets\Scripts\TerrainBounds.cs" Line="14" Column="11" />
-      <File FileName="Assets\Scripts\CameraFollow.cs" Line="8" Column="22" />
-      <File FileName="Assets\Scripts\GravityBall.cs" Line="53" Column="1" />
+      <File FileName="Assets\Scripts\CameraFollow.cs" Line="30" Column="4" />
+      <File FileName="Assets\Scripts\Tutorial.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayerController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\TerrainBounds.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GravityBall.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Shield.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\EndLevel.cs" Line="17" Column="41" />
-      <File FileName="Assets\Scripts\GeneralManager.cs" Line="20" Column="10" />
+      <File FileName="Assets\Scripts\EndLevel.cs" Line="18" Column="3" />
+      <File FileName="Assets\Scripts\GeneralManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Jukebox.cs" Line="6" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

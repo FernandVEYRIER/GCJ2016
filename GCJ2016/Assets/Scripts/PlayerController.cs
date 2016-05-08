@@ -97,6 +97,11 @@ public class PlayerController : MonoBehaviour {
 
 	void Shoot()
 	{
+		if (GameManager.GM.gameState != GeneralManager.GameState.PLAY)
+		{
+			return;
+		}
+
 		Vector3 mousePos = Camera.main.ScreenToWorldPoint (Input.mousePosition);
 		mousePos.z = 0;
 		GameObject go;
