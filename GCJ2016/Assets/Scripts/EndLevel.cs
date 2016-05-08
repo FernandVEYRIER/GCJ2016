@@ -7,6 +7,13 @@ public class EndLevel : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		GameManager.GM.LoadLevel (levelToLoad);
+		if (col.tag == "Player")
+			GameManager.GM.LoadLevel (levelToLoad);
+	}
+
+	void OnCollisionEnter2D(Collision2D col)
+	{
+		if (col.gameObject.tag == "Player")
+			GameManager.GM.LoadLevel (levelToLoad);
 	}
 }
